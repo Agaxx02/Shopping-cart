@@ -1,0 +1,26 @@
+.App {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.Navbar {
+	background-color: #212121;
+	color: #ffff;
+	height: 70px;
+	padding-top: 7px;
+	.cartContainer {
+		margin: auto 20px auto auto;
+		background-color: #ffff;
+		width: 60px;
+		height: 60px;
+		border: 1px black solid;
+		border-radius: 55%;
+		.cartIcon {
+			display: block;
+			height: 35px;
+			margin: auto;
+			padding-top: 20%;
+		}
+	}
+}
