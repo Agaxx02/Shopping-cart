@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ProductProps {
 	name: string;
 	price: number;
@@ -9,10 +7,12 @@ interface ProductProps {
 
 function Product({ name, price, description }: ProductProps) {
 	return (
-		<div>
-			<h1>{name}</h1>
-			<h2>{price}</h2>
-			<h2>{description}</h2>
+		<div className='product'>
+			<img src='#' alt='product'></img>
+			<h2>{name}</h2>
+			<h3>{price}$</h3>
+			<h4>{description}</h4>
+			<button>Add to your cart</button>
 		</div>
 	);
 }

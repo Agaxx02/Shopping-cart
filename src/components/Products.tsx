@@ -1,4 +1,3 @@
-import React from 'react';
 import Product from './Product';
 
 const products = [
@@ -11,7 +10,7 @@ function Products() {
 	return (
 		<div>
 			{products.map((product) => {
-				return <Product {...product} />;
+				return <Product key={product.id} {...product} />;
 			})}
 		</div>
 	);
