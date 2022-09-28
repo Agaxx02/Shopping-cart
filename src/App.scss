@@ -8,24 +8,26 @@
 	background-color: #212121;
 	color: #ffff;
 	height: 70px;
+	line-height: 70px;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
 	.cartContainer {
-		display: inline-block;
-		position: absolute;
-		right: 20px;
-		margin: 15px 20px;
 		background-color: #ffff;
 		width: 40px;
 		height: 40px;
 		border: 1px black solid;
 		border-radius: 55%;
+		margin-top: 15px;
 		.cartIcon {
 			height: 25px;
-			padding-top: 20%;
+			padding-bottom: 15%;
 		}
 	}
 	input {
-		margin-top: 30px;
-		align-items: center;
+		height: 25px;
+		width: 200px;
+		margin-top: 20px;
 	}
 }
 
