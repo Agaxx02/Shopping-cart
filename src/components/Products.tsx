@@ -8,7 +8,7 @@ const products = [
 
 function Products() {
 	return (
-		<div>
+		<div className='products'>
 			{products.map((product) => {
 				return <Product key={product.id} {...product} />;
 			})}
