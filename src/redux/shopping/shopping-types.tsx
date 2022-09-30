@@ -1,4 +1,6 @@
-export const ADD_TO_CART = 'ADD_TO_CART';
-export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
-export const ADJUST_QTY = 'ADJUST_QTY';
-export const LOAD_CURRENT_ITEM = 'LOAD_CURRENT_ITEM';
+export enum ActionType {
+	ADD = 'ADD_TO_CART',
+	REMOVE = 'REMOVE_FROM_CART',
+	LOAD = 'LOAD_CURRENT_ITEM',
+	ADJUST = 'ADJUST_QTY',
+}

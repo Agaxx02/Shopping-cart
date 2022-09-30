@@ -1,7 +1,7 @@
-import * as actionTypes from './shopping-types';
+import { ActionType } from './shopping-types';
 export const addToCart = (itemID: number) => {
 	return {
-		type: actionTypes.ADD_TO_CART,
+		type: ActionType.ADD,
 		payload: {
 			id: itemID,
 		},
@@ -9,7 +9,7 @@ export const addToCart = (itemID: number) => {
 };
 export const removeFromCart = (itemID: number) => {
 	return {
-		type: actionTypes.REMOVE_FROM_CART,
+		type: ActionType.REMOVE,
 		payload: {
 			id: itemID,
 		},
@@ -18,7 +18,7 @@ export const removeFromCart = (itemID: number) => {
 
 export const adjustQty = (itemID: number, value: number) => {
 	return {
-		type: actionTypes.ADJUST_QTY,
+		type: ActionType.ADJUST,
 		payload: {
 			id: itemID,
 			qty: value,
@@ -27,7 +27,7 @@ export const adjustQty = (itemID: number, value: number) => {
 };
 export const loadCurrentItem = (item: Object) => {
 	return {
-		type: actionTypes.LOAD_CURRENT_ITEM,
+		type: ActionType.LOAD,
 		payload: item,
 	};
 };
