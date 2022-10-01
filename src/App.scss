@@ -37,6 +37,10 @@
 }
 .product {
 	width: 100%;
+	border: 1px solid black;
+}
+.product-img {
+	width: 200px;
 }
 
 .cartContainer:hover {
@@ -51,6 +55,6 @@
 }
 @media (min-width: 1000px) {
 	.product {
-		width: 33%;
+		width: 33.2%;
 	}
 }

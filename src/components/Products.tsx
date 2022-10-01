@@ -5,17 +5,25 @@ interface ProductsProps {
 	products: Object[];
 }
 
+type stateType = {
+	shop: {
+		products: Object[];
+		cart: Object[];
+		currentItem: Object | null;
+	};
+};
+
 const Products = ({ products }: ProductsProps) => {
 	return (
-		<div>
-			{/* {products.map((product: Object) => (
-				<Product  key={product.id} product={product} />
-			))} */}
+		<div className='products'>
+			{products.map((product: any) => {
+				return <Product key={product['id']} {...product} />;
+			})}
 		</div>
 	);
 };
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: stateType) => {
 	return {
 		products: state.shop.products,
 	};
