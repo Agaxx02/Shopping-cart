@@ -1,7 +1,7 @@
 import { ActionType } from './shopping-types';
 import { Action } from '.';
 
-const INITIAL_STATE = {
+let INITIAL_STATE = {
 	products: [
 		{
 			name: 'Apple MacBook',
@@ -39,21 +39,44 @@ const INITIAL_STATE = {
 			id: 5,
 			photo: 'https://i.ibb.co/LNVrgzM/preview.jpg',
 		},
-	], //id,title,description, price, img
-	cart: [], //id,title,description, price, img, qty
-	currentItem: null,
+	],
+	cart: new Array<any>(),
+	currentItem: {},
 };
 
 const shopReducer = (state = INITIAL_STATE, action: Action) => {
 	switch (action.type) {
 		case ActionType.ADD:
+			console.log(state);
 			return state;
+		// const item = state.products.find((prod) => prod.id === action.payload.id);
+		// const inCart = state.cart.find((item) => (item.id === action.payload.id ? true : false));
+		// console.log(item, inCart);
+		// return {
+		// 	...state,
+		// 	cart: inCart
+		// 		? state.cart.map((item) =>
+		// 				item.id === action.payload.id ? { ...item, qty: item.qty + 1 } : item
+		// 		  )
+		// 		: [...state.cart, { ...item, qty: 1 }],
+		// };
 		case ActionType.REMOVE:
-			return state;
+			return {
+				...state,
+				cart: state.cart.filter((item) => item.id !== action.payload.id),
+			};
 		case ActionType.ADJUST:
-			return state;
+			return {
+				...state,
+				cart: state.cart.map((item) =>
+					item.id === action.payload.id ? { ...item, qty: action.payload.qty } : item
+				),
+			};
 		case ActionType.LOAD:
-			return state;
+			return {
+				...state,
+				currentItem: action.payload,
+			};
 		default:
 			return state;
 	}

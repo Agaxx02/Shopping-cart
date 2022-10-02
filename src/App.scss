@@ -21,7 +21,7 @@
 		margin-top: 15px;
 		.cartIcon {
 			height: 25px;
-			padding-bottom: 15%;
+			padding-bottom: 20%;
 		}
 	}
 	input {
@@ -33,11 +33,9 @@
 .products {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
 }
 .product {
 	width: 100%;
-	border: 1px solid black;
 }
 .product-img {
 	width: 200px;
@@ -55,6 +53,6 @@
 }
 @media (min-width: 1000px) {
 	.product {
-		width: 33.2%;
+		width: 33.33%;
 	}
 }
