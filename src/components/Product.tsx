@@ -8,12 +8,11 @@ interface ProductProps {
 	id: number;
 	photo: string;
 }
-interface DispatchProps {
-	addToCart: (id: number) => void;
-}
+// interface DispatchProps {
+// 	addToCart: (id: number) => void;
+// }
 
-function Product(product: ProductProps, action: DispatchProps) {
-	console.log(addToCart);
+function Product(product: ProductProps, add: any) {
 	return (
 		<div className='product'>
 			<img src={product.photo} alt='product' className='product-img'></img>
@@ -25,13 +24,16 @@ function Product(product: ProductProps, action: DispatchProps) {
 		</div>
 	);
 }
-
+// const mapDispatchToProps = (dispatch: any) => {
+// 	const action = {
+// 		addToCart: (id: number) => dispatch(addToCart(id)),
+// 	};
+// 	console.log(action);
+// 	return action;
+// };
 const mapDispatchToProps = (dispatch: any) => {
-	const action = {
-		addToCart: (id: number) => dispatch(addToCart(id)),
+	return {
+		add: (itemId: number) => dispatch(addToCart(itemId)),
 	};
-	console.log(action);
-	return action;
 };
-
 export default connect(null, mapDispatchToProps)(Product);
