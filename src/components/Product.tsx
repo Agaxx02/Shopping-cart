@@ -14,7 +14,6 @@ interface DispatchProps {
 type PropsType = ProductProps & DispatchProps;
 
 function Product(product: PropsType) {
-	console.log(product);
 	return (
 		<div className='product'>
 			<img src={product.photo} alt='product' className='product-img'></img>
@@ -30,7 +29,6 @@ const mapDispatchToProps = (dispatch: any) => {
 	const action = {
 		addToCart: (id: number) => dispatch(addToCart(id)),
 	};
-	console.log(action);
 	return action;
 };
 
