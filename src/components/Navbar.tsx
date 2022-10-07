@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
-import Cart from './Cart';
+import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
-export interface cartProp {
+
+interface navProp {
 	cart: object[];
 }
 
-function Navbar(props: cartProp) {
+function Navbar(props: navProp) {
 	const [cartCount, setCartCount] = useState(0);
-	const [showCart, setShowCart] = useState(false);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		let count = 0;
@@ -16,19 +17,17 @@ function Navbar(props: cartProp) {
 		});
 		setCartCount(count);
 	}, [props.cart, cartCount]);
+
+	const goToCart = () => {
+		navigate('/cart');
+	};
 	return (
 		<div className='Navbar'>
 			<span>E-commerence</span>
 			<input type='text' placeholder='search'></input>
 			<span>{cartCount}</span>
-			<div
-				className='cartContainer'
-				onClick={() => {
-					setShowCart(true);
-				}}
-			>
+			<div className='cartContainer' onClick={goToCart}>
 				<img className='cartIcon' alt='shopping cart' src='./shopping-cart.png'></img>
-				{showCart ? <Cart /> : null}
 			</div>
 		</div>
 	);
