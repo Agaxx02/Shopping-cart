@@ -25,9 +25,13 @@ function Navbar(props: navProp) {
 		<div className='Navbar'>
 			<span>E-commerence</span>
 			<input type='text' placeholder='search'></input>
-			<span>{cartCount}</span>
 			<div className='cartContainer' onClick={goToCart}>
-				<img className='cartIcon' alt='shopping cart' src='./shopping-cart.png'></img>
+				<div className='imgContainer'>
+					<img className='cartIcon' alt='shopping cart' src='./shopping-cart.png'></img>
+				</div>
+				<div className='cartCount'>
+					<h4>{cartCount}</h4>
+				</div>
 			</div>
 		</div>
 	);
