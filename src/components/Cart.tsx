@@ -31,24 +31,32 @@ function Cart(props: cartProps) {
 				return (
 					<div key={item.id} className='cartProduct'>
 						<img className='product-img' src={item.photo} alt='Product'></img>
-						<h3>{item.name}</h3>
-						<span onClick={() => props.adjustQty(item.id, item.qty - 1)}>-</span>
-						<h4>{item.qty}</h4>
-						<span onClick={() => props.adjustQty(item.id, item.qty + 1)}>+</span>
-						<h4>{item.price}</h4>
-						<button
-							onClick={() => {
-								props.removeFromCart(item.id);
-							}}
-						>
-							Remove
-						</button>
+						<section className='product-info'>
+							<h3>{item.name}</h3>
+							<h4>{item.description}</h4>
+							<section className='changeQty'>
+								<span onClick={() => props.adjustQty(item.id, item.qty - 1)}>-</span>
+								<h4>{item.qty}</h4>
+								<span onClick={() => props.adjustQty(item.id, item.qty + 1)}>+</span>
+							</section>
+							<h3>Price: {item.price}$</h3>
+						</section>
+						<section className='product-buttons'>
+							<button>View item</button>
+							<button
+								onClick={() => {
+									props.removeFromCart(item.id);
+								}}
+							>
+								Remove
+							</button>
+						</section>
 					</div>
 				);
 			})}
 
 			<h4>Total amount:</h4>
-			<span>{countFinalAmout()}</span>
+			<span>{countFinalAmout()} $</span>
 			<button onClick={goBack}>Go back</button>
 		</div>
 	);
