@@ -15,7 +15,7 @@ type stateType = {
 
 const Products = ({ products }: ProductsProps) => {
 	return (
-		<div className='products'>
+		<div className='shop-flex'>
 			{products.map((product: any) => {
 				return <Product key={product.id} {...product} />;
 			})}

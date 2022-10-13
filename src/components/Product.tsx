@@ -15,8 +15,8 @@ type PropsType = ProductProps & DispatchProps;
 
 function Product(product: PropsType) {
 	return (
-		<div className='product'>
-			<img src={product.photo} alt='product' className='product-img'></img>
+		<div className='shop'>
+			<img src={product.photo} alt='product' className='product-img '></img>
 			<h2>{product.name}</h2>
 			<h3>{product.price}$</h3>
 			<h4>{product.description}</h4>

@@ -21,9 +21,12 @@ function Navbar(props: navProp) {
 	const goToCart = () => {
 		navigate('/cart');
 	};
+	const goToShop = () => {
+		navigate('/');
+	};
 	return (
 		<div className='Navbar'>
-			<span>E-commerence</span>
+			<span onClick={goToShop}>E-commerence</span>
 			<input type='text' placeholder='search'></input>
 			<div className='cartContainer' onClick={goToCart}>
 				<div className='imgContainer'>

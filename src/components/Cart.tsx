@@ -30,7 +30,7 @@ function Cart(props: cartProps) {
 				}
 				return (
 					<div key={item.id} className='cartProduct'>
-						<img className='product-img' src={item.photo} alt='Product'></img>
+						<img className='product-img img-border' src={item.photo} alt='Product'></img>
 						<section className='product-info'>
 							<h3>{item.name}</h3>
 							<h4>{item.description}</h4>
