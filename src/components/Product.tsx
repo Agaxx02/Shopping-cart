@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/shopping/shopping-actions';
+import { Link } from 'react-router-dom';
+import { addToCart, loadCurrentItem } from '../redux/shopping/shopping-actions';
 
 interface ProductProps {
 	name: string;
@@ -10,6 +11,7 @@ interface ProductProps {
 }
 interface DispatchProps {
 	addToCart: (id: number) => void;
+	loadCurrentItem: (item: Object) => void;
 }
 type PropsType = ProductProps & DispatchProps;
 
@@ -20,7 +22,9 @@ function Product(product: PropsType) {
 			<h2>{product.name}</h2>
 			<h3>{product.price}$</h3>
 			<h4>{product.description}</h4>
-			<button>View item</button>
+			<Link to={`/product`}>
+				<button onClick={() => product.loadCurrentItem(product)}>View item</button>
+			</Link>
 			<button onClick={() => product.addToCart(product.id)}>Add to your cart</button>
 		</div>
 	);
@@ -28,6 +32,7 @@ function Product(product: PropsType) {
 const mapDispatchToProps = (dispatch: any) => {
 	const action = {
 		addToCart: (id: number) => dispatch(addToCart(id)),
+		loadCurrentItem: (item: Object) => dispatch(loadCurrentItem(item)),
 	};
 	return action;
 };

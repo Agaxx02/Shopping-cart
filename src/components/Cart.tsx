@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { adjustQty, removeFromCart } from '../redux/shopping/shopping-actions';
+import { Link, useNavigate } from 'react-router-dom';
+import { adjustQty, removeFromCart, loadCurrentItem } from '../redux/shopping/shopping-actions';
 
 interface cartProps {
 	cart: object[];
 	adjustQty: (itemID: number, value: number) => void;
 	removeFromCart: (itemID: number) => void;
+	loadCurrentItem: (item: Object) => void;
 }
 
 function Cart(props: cartProps) {
@@ -42,7 +43,9 @@ function Cart(props: cartProps) {
 							<h3>Price: {item.price}$</h3>
 						</section>
 						<section className='product-buttons'>
-							<button>View item</button>
+							<Link to={`/product`}>
+								<button onClick={() => props.loadCurrentItem(item)}>View item</button>
+							</Link>
 							<button
 								onClick={() => {
 									props.removeFromCart(item.id);
@@ -70,6 +73,7 @@ const mapDispatchToProps = (dispatch: any) => {
 	const action = {
 		adjustQty: (itemID: number, value: number) => dispatch(adjustQty(itemID, value)),
 		removeFromCart: (itemID: number) => dispatch(removeFromCart(itemID)),
+		loadCurrentItem: (item: Object) => dispatch(loadCurrentItem(item)),
 	};
 	return action;
 };
