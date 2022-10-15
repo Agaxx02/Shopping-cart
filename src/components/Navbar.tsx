@@ -27,7 +27,7 @@ function Navbar(props: navProp) {
 	return (
 		<div className='Navbar'>
 			<span onClick={goToShop}>E-commerence</span>
-			<input type='text' placeholder='search'></input>
+
 			<div className='cartContainer' onClick={goToCart}>
 				<div className='imgContainer'>
 					<img className='cartIcon' alt='shopping cart' src='./shopping-cart.png'></img>

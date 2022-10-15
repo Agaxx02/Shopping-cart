@@ -19,6 +19,7 @@ function Product(product: singleItemProps) {
 			<h2>{product.currentItem.name}</h2>
 			<h3>{product.currentItem.price}$</h3>
 			<h4>{product.currentItem.description}</h4>
+			<h6>{product.currentItem.detailedDescription}</h6>
 			<button onClick={() => product.addToCart(product.currentItem.id)}>Add to your cart</button>
 			<button onClick={goBack}>Go back</button>
 		</div>
