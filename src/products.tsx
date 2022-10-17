@@ -51,7 +51,7 @@ const products: any = [
 		detailedDescription:
 			'Christmas cup made of glass with lovely pattern, perfect for a Christmas gift',
 		id: 6,
-		photo: '',
+		photo: 'https://i.ibb.co/mB1dftg/images.jpg',
 	},
 	{
 		name: 'Forest Candle',
@@ -60,15 +60,15 @@ const products: any = [
 		detailedDescription:
 			'You can feel like you are in the middle of the forest when you smell that candle',
 		id: 7,
-		photo: '',
+		photo: 'https://i.ibb.co/3hLvVL9/download.jpg',
 	},
 	{
 		name: `Rubik's cube`,
 		price: 30,
-		description: 'JPerm RS3 M 2020 3x3',
-		detailedDescription: `The RS3 M 2020 is a great mix of speed and stability, with a very responsive feel. I've found that setting up the cube to be relatively fast makes it much easier to learn and execute new finger tricks! `,
+		description: 'MoYu RS3 M 2020',
+		detailedDescription: `The MoYu RS3 M 2020 is a great mix of speed and stability, with a very responsive feel. I've found that setting up the cube to be relatively fast makes it much easier to learn and execute new finger tricks! `,
 		id: 8,
-		photo: '',
+		photo: 'https://i.ibb.co/CWCb5VK/MOYURS3-M2020-1024x1024.webp',
 	},
 	{
 		name: 'Yosemite Valley Puzzle',
@@ -76,7 +76,7 @@ const products: any = [
 		description: '1000 pieces',
 		detailedDescription: `Imagine the gigantic glaciers and forces of nature that helped form the majestic “Yosemite Valley” as you puzzle this breathtaking scene!`,
 		id: 9,
-		photo: '',
+		photo: 'https://i.ibb.co/DwzR0mg/image-0826f544-54d4-4098-8b3a-09314ecc6044-384x384.webp',
 	},
 	{
 		name: 'Nikon Z9',
@@ -85,7 +85,7 @@ const products: any = [
 		detailedDescription: `Delivering speed, image quality, and connectivity, the Nikon Z9 is a professional-grade camera characterized by its newly developed sensor, advanced AF performance, and high-resolution 8K video recording. Their first mirrorless flagship camera, the Z9 stands out as a camera that appeals to photographers and filmmakers working across a wide variety of applications.
 		`,
 		id: 10,
-		photo: 'https://i.ibb.co/LNVrgzM/preview.jpg',
+		photo: 'https://i.ibb.co/xCv2Q1m/nikon-z9.webp',
 	},
 ];
 export default products;
