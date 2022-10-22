@@ -1,4 +1,13 @@
-const products: any = [
+type product = {
+	name: string;
+	price: number;
+	description: string;
+	detailedDescription: string;
+	id: number;
+	photo: string;
+}[];
+
+const products: product = [
 	{
 		name: 'MacBook Air Apple ',
 		price: 1050,
@@ -13,7 +22,7 @@ const products: any = [
 		price: 800,
 		description: 'Starlight Aluminum Case with Solo Loop',
 		detailedDescription:
-			'The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy.The Solo Loop is made from soft, stretchable silicone and designed for ultracomfort with no clasps or buckles. ',
+			'The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Solo Loop is made from soft, stretchable silicone and designed for ultracomfort with no clasps or buckles. ',
 		id: 2,
 		photo:
 			'https://i.ibb.co/xM76rK9/MPL73-VW-34-FR-watch-41-alum-starlight-nc-8s-VW-34-FR-WF-SI.jpg',

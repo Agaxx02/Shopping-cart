@@ -13,7 +13,7 @@
 	flex-flow: row;
 	justify-content: space-around;
 	span {
-		font-size: 10px;
+		font-size: 15px;
 	}
 	.cartContainer {
 		background-color: #212121;
@@ -117,6 +117,12 @@ input {
 		margin: 5px;
 		width: 50px;
 		font-size: 10px;
+	}
+}
+.singleItem {
+	display: flex;
+	.itemDetails {
+		padding-top: 10%;
 	}
 }
 .cartProduct {

@@ -14,14 +14,16 @@ function Product(product: singleItemProps) {
 		navigate('/');
 	};
 	return (
-		<div className=''>
+		<div className='singleItem'>
 			<img src={product.currentItem.photo} alt='product' className='product-img '></img>
-			<h2>{product.currentItem.name}</h2>
-			<h3>{product.currentItem.price}$</h3>
-			<h4>{product.currentItem.description}</h4>
-			<h6>{product.currentItem.detailedDescription}</h6>
-			<button onClick={() => product.addToCart(product.currentItem.id)}>Add to your cart</button>
-			<button onClick={goBack}>Go back</button>
+			<section className='itemDetails'>
+				<h2>{product.currentItem.name}</h2>
+				<h3>{product.currentItem.price}$</h3>
+				<h4>{product.currentItem.description}</h4>
+				<h6>{product.currentItem.detailedDescription}</h6>
+				<button onClick={() => product.addToCart(product.currentItem.id)}>Add to your cart</button>
+				<button onClick={goBack}>Go back</button>
+			</section>
 		</div>
 	);
 }
