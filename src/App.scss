@@ -120,9 +120,32 @@ input {
 	}
 }
 .singleItem {
-	display: flex;
+	img {
+		margin-top: 80px;
+		height: 200px;
+		width: 200px;
+	}
 	.itemDetails {
-		padding-top: 10%;
+		padding: 10%;
+		h2 {
+			font-size: 30px;
+		}
+		h3,
+		h4 {
+			font-size: 20px;
+		}
+		h6 {
+			font-size: 15px;
+		}
+		button {
+			margin: 5px;
+			width: 150px;
+		}
+		button:hover {
+			-webkit-box-shadow: -4px 19px 50px 1px rgba(66, 68, 90, 1);
+			-moz-box-shadow: -4px 19px 50px 1px rgba(66, 68, 90, 1);
+			box-shadow: -4px 19px 50px 1px rgba(66, 68, 90, 1);
+		}
 	}
 }
 .cartProduct {
